@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-
-const Navbar = () => {
-  const [country, setcountry] = useState({
+const Selftest = () => {
+  const [country, setCountry] = useState({
     country: "",
     value: "",
     cities: [],
   });
+
   const Countries = [
     {
       country: "India",
@@ -20,23 +20,21 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="hero">
-      {/* First Dropdown */}
+    <div>
+      {/* First Drop down */}
       <select
-        // value={country}
         onChange={(e) => {
           console.log(e.target.value);
-          setcountry(e.target.value);
+          console.log(setCountry(e.target.value));
+          //   console.log(country)
         }}
       >
         {Countries.map((item, index) => {
           return <option value={index}>{item.country}</option>;
         })}
       </select>
-
-      {/* Second Dropdown */}
+      {/* Second Drop down */}
       <select
-        // value={country}
         onChange={(e) => {
           console.log(e.target.value);
         }}
@@ -49,6 +47,4 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;
-
+export default Selftest;

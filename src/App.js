@@ -1,74 +1,24 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import { Switch, Route } from "react-router-dom";
-
-const Home = () => {
-  return (
-    <>
-      <Navbar />
-      <section className="hero-section">
-        <p>Subscribe to </p>
-        <h1>Thapa Technical Home Page</h1>
-      </section>
-    </>
-  );
-};
-
-const About = () => {
-  return (
-    <>
-      <Navbar />
-      <section className="hero-section">
-        <p>Welcome to </p>
-        <h1>Thapa Technical About Page</h1>
-      </section>
-    </>
-  );
-};
-
-const Service = () => {
-  return (
-    <>
-      <Navbar />
-      <section className="hero-section">
-        <p>Welcome to </p>
-        <h1>Thapa Technical Service Page</h1>
-      </section>
-    </>
-  );
-};
-
-const Contact = () => {
-  return (
-    <>
-      <Navbar />
-      <section className="hero-section">
-        <p>Welcome to </p>
-        <h1>Thapa Technical Contact Page</h1>
-      </section>
-    </>
-  );
-};
-
+import Selftest from "./components/Selfttest";
+import CodeTwo from "./components/CodeTwo";
+import CodeThree from "./components/CodeThree";
 const App = () => {
+  // const options = ["1", "2", "2", "2", "2"];
+  // const onChangeHandler = (e) => {
+  //   console.log("User selected", e.target.value);
+  // };
+
   return (
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-
-      <Route path="/about">
-        <About />
-      </Route>
-
-      <Route path="/service">
-        <Service />
-      </Route>
-
-      <Route path="/contact">
-        <Contact />
-      </Route>
-    </Switch>
+    <>
+      <CodeThree />
+      {/* <select onChange={onChangeHandler}>
+        <option>Please choose any one option</option>
+        {options.map((option, index) => {
+          return <option key={index}>{option}</option>;
+        })}
+      </select> */}
+    </>
   );
 };
 
